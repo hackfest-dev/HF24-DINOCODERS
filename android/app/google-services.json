@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "251957041943",
+    "project_id": "genefarm-dinocoders",
+    "storage_bucket": "genefarm-dinocoders.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251957041943:android:5aef5a35f1673827b1f552",
+        "android_client_info": {
+          "package_name": "com.genefarm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "251957041943-4damrc6estv907r0b11jpfsa2807c001.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.genefarm",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "251957041943-0ceoo5f7et2fn5pieris0m6938u9vsh8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuEd3r8bZPcZW0VcAQqYeXuFkBmvA6nLU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "251957041943-0ceoo5f7et2fn5pieris0m6938u9vsh8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "251957041943-inha2m449jkhplgbc7tbjblk8hkv7l6h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.genefarm"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251957041943:android:dd87be52f7921a3bb1f552",
+        "android_client_info": {
+          "package_name": "genefarm.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "251957041943-m5ooe4o958c7hj4vjsu542b962ubfci4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "genefarm.com",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "251957041943-0ceoo5f7et2fn5pieris0m6938u9vsh8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuEd3r8bZPcZW0VcAQqYeXuFkBmvA6nLU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "251957041943-0ceoo5f7et2fn5pieris0m6938u9vsh8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "251957041943-inha2m449jkhplgbc7tbjblk8hkv7l6h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.genefarm"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
