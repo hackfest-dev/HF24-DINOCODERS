@@ -7,7 +7,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:webviewx_plus/webviewx_plus.dart';
 import 'create_model.dart';
 export 'create_model.dart';
 
@@ -95,6 +94,12 @@ class _CreateWidgetState extends State<CreateWidget>
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
+            image: DecorationImage(
+              fit: BoxFit.fitHeight,
+              image: Image.asset(
+                'assets/images/bG.jpg',
+              ).image,
+            ),
             gradient: LinearGradient(
               colors: [
                 FlutterFlowTheme.of(context).primary,
@@ -120,33 +125,6 @@ class _CreateWidgetState extends State<CreateWidget>
                       borderRadius: BorderRadius.circular(16.0),
                     ),
                     alignment: const AlignmentDirectional(0.0, 0.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 12.0, 0.0),
-                          child: Icon(
-                            Icons.flourescent_rounded,
-                            color: FlutterFlowTheme.of(context).info,
-                            size: 44.0,
-                          ),
-                        ),
-                        Text(
-                          FFLocalizations.of(context).getText(
-                            'lgnvb24z' /* Genefarm */,
-                          ),
-                          style: FlutterFlowTheme.of(context)
-                              .displaySmall
-                              .override(
-                                fontFamily: 'Inter',
-                                color: FlutterFlowTheme.of(context).info,
-                                letterSpacing: 0.0,
-                              ),
-                        ),
-                      ],
-                    ),
                   ),
                 ),
                 Padding(
@@ -388,17 +366,15 @@ class _CreateWidgetState extends State<CreateWidget>
                                   await showDialog(
                                     context: context,
                                     builder: (alertDialogContext) {
-                                      return WebViewAware(
-                                        child: AlertDialog(
-                                          content: const Text('Details are Saved.'),
-                                          actions: [
-                                            TextButton(
-                                              onPressed: () => Navigator.pop(
-                                                  alertDialogContext),
-                                              child: const Text('Ok'),
-                                            ),
-                                          ],
-                                        ),
+                                      return AlertDialog(
+                                        content: const Text('Details are Saved.'),
+                                        actions: [
+                                          TextButton(
+                                            onPressed: () => Navigator.pop(
+                                                alertDialogContext),
+                                            child: const Text('Ok'),
+                                          ),
+                                        ],
                                       );
                                     },
                                   );
@@ -465,7 +441,7 @@ class _CreateWidgetState extends State<CreateWidget>
                                   }
 
                                   context.pushNamedAuth(
-                                    'Home',
+                                    'homepage',
                                     context.mounted,
                                     extra: <String, dynamic>{
                                       kTransitionInfoKey: const TransitionInfo(

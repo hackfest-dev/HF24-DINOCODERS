@@ -1,7 +1,9 @@
+import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'transaction_successfull_model.dart';
 export 'transaction_successfull_model.dart';
@@ -15,10 +17,25 @@ class TransactionSuccessfullWidget extends StatefulWidget {
 }
 
 class _TransactionSuccessfullWidgetState
-    extends State<TransactionSuccessfullWidget> {
+    extends State<TransactionSuccessfullWidget> with TickerProviderStateMixin {
   late TransactionSuccessfullModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  final animationsMap = {
+    'iconOnPageLoadAnimation': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        RotateEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 600.ms,
+          begin: 0.0,
+          end: 1.0,
+        ),
+      ],
+    ),
+  };
 
   @override
   void initState() {
@@ -73,7 +90,8 @@ class _TransactionSuccessfullWidgetState
                           FontAwesomeIcons.check,
                           color: FlutterFlowTheme.of(context).secondaryText,
                           size: 65.0,
-                        ),
+                        ).animateOnPageLoad(
+                            animationsMap['iconOnPageLoadAnimation']!),
                       ),
                     ),
                   ),
@@ -108,7 +126,7 @@ class _TransactionSuccessfullWidgetState
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 50.0),
                 child: FFButtonWidget(
                   onPressed: () async {
-                    context.pushNamed('Home');
+                    context.pushNamed('homepage');
                   },
                   text: FFLocalizations.of(context).getText(
                     'vax68hm7' /* Back to home */,

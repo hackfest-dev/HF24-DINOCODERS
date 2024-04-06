@@ -49,7 +49,7 @@ class _CartWidgetState extends State<CartWidget> {
         key: scaffoldKey,
         backgroundColor: const Color(0xFFF1F5F8),
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).success,
+          backgroundColor: const Color(0xFF08654A),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
@@ -67,21 +67,22 @@ class _CartWidgetState extends State<CartWidget> {
           ),
           title: Align(
             alignment: const AlignmentDirectional(0.0, 0.0),
-            child: Text(
-              'Cart :${formatNumber(
-                FFAppState().cartsum,
-                formatType: FormatType.custom,
-                currency: '',
-                format: '',
-                locale: '',
-              )}',
-              style: FlutterFlowTheme.of(context).displaySmall.override(
-                    fontFamily: 'Outfit',
-                    color: const Color(0xFF0F1113),
-                    fontSize: 32.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w500,
-                  ),
+            child: Padding(
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 40.0, 0.0),
+              child: Text(
+                'Cart :${formatNumber(
+                  FFAppState().cartsum,
+                  formatType: FormatType.custom,
+                  currency: '',
+                  format: '',
+                  locale: '',
+                )}',
+                style: FlutterFlowTheme.of(context).titleMedium.override(
+                      fontFamily: 'Readex Pro',
+                      fontSize: 25.0,
+                      letterSpacing: 0.0,
+                    ),
+              ),
             ),
           ),
           actions: const [],
@@ -92,26 +93,6 @@ class _CartWidgetState extends State<CartWidget> {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Text(
-                      FFLocalizations.of(context).getText(
-                        'evh7vevq' /* cart items are below  */,
-                      ),
-                      style: FlutterFlowTheme.of(context).labelMedium.override(
-                            fontFamily: 'Plus Jakarta Sans',
-                            color: const Color(0xFF57636C),
-                            fontSize: 14.0,
-                            letterSpacing: 0.0,
-                            fontWeight: FontWeight.w500,
-                          ),
-                    ),
-                  ],
-                ),
-              ),
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
                 child: Builder(
@@ -137,9 +118,9 @@ class _CartWidgetState extends State<CartWidget> {
                                   child: SizedBox(
                                     width: 50.0,
                                     height: 50.0,
-                                    child: SpinKitSpinningCircle(
+                                    child: SpinKitFoldingCube(
                                       color:
-                                          FlutterFlowTheme.of(context).primary,
+                                          FlutterFlowTheme.of(context).tertiary,
                                       size: 50.0,
                                     ),
                                   ),
@@ -315,6 +296,8 @@ class _CartWidgetState extends State<CartWidget> {
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).titleLarge.override(
                           fontFamily: 'Readex Pro',
+                          color:
+                              FlutterFlowTheme.of(context).secondaryBackground,
                           letterSpacing: 0.0,
                         ),
                     elevation: 3.0,

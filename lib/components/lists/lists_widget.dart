@@ -53,8 +53,8 @@ class _ListsWidgetState extends State<ListsWidget> {
               child: SizedBox(
                 width: 50.0,
                 height: 50.0,
-                child: SpinKitSpinningCircle(
-                  color: FlutterFlowTheme.of(context).primary,
+                child: SpinKitFoldingCube(
+                  color: FlutterFlowTheme.of(context).tertiary,
                   size: 50.0,
                 ),
               ),
@@ -70,7 +70,7 @@ class _ListsWidgetState extends State<ListsWidget> {
             key: scaffoldKey,
             backgroundColor: const Color(0xFFF1F5F8),
             appBar: AppBar(
-              backgroundColor: FlutterFlowTheme.of(context).success,
+              backgroundColor: const Color(0xFF08654A),
               automaticallyImplyLeading: false,
               leading: FlutterFlowIconButton(
                 borderColor: Colors.transparent,
@@ -88,11 +88,11 @@ class _ListsWidgetState extends State<ListsWidget> {
               ),
               title: Text(
                 FFLocalizations.of(context).getText(
-                  'ctk5w74r' /*       list */,
+                  'ctk5w74r' /* List */,
                 ),
                 style: FlutterFlowTheme.of(context).displaySmall.override(
                       fontFamily: 'Outfit',
-                      color: const Color(0xFF0F1113),
+                      color: FlutterFlowTheme.of(context).secondaryBackground,
                       fontSize: 32.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
@@ -108,28 +108,6 @@ class _ListsWidgetState extends State<ListsWidget> {
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Text(
-                          FFLocalizations.of(context).getText(
-                            'bfq7q7jk' /* the following lists  are avail... */,
-                          ),
-                          style:
-                              FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Plus Jakarta Sans',
-                                    color: const Color(0xFF57636C),
-                                    fontSize: 14.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding:
                         const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
                     child: StreamBuilder<List<ListsRecord>>(
                       stream: queryListsRecord(
@@ -142,8 +120,8 @@ class _ListsWidgetState extends State<ListsWidget> {
                             child: SizedBox(
                               width: 50.0,
                               height: 50.0,
-                              child: SpinKitSpinningCircle(
-                                color: FlutterFlowTheme.of(context).primary,
+                              child: SpinKitFoldingCube(
+                                color: FlutterFlowTheme.of(context).tertiary,
                                 size: 50.0,
                               ),
                             ),

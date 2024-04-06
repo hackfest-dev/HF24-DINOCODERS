@@ -82,8 +82,8 @@ class _EditProfileWidgetState extends State<EditProfileWidget>
                     gradient: LinearGradient(
                       colors: [
                         FlutterFlowTheme.of(context).primary,
-                        FlutterFlowTheme.of(context).error,
-                        FlutterFlowTheme.of(context).tertiary
+                        FlutterFlowTheme.of(context).success,
+                        FlutterFlowTheme.of(context).accent1
                       ],
                       stops: const [0.0, 0.5, 1.0],
                       begin: const AlignmentDirectional(-1.0, -1.0),

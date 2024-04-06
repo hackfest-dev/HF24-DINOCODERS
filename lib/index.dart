@@ -10,7 +10,6 @@ export '/components/edit_profile/edit_profile_widget.dart'
     show EditProfileWidget;
 export '/components/pages/change_password/change_password_widget.dart'
     show ChangePasswordWidget;
-export '/components/home/home_widget.dart' show HomeWidget;
 export '/components/phone/phone_widget.dart' show PhoneWidget;
 export '/components/verify_o_t_p/verify_o_t_p_widget.dart' show VerifyOTPWidget;
 export '/components/splash_screen/splash_screen_widget.dart'
@@ -25,4 +24,3 @@ export '/transaction_successfull/transaction_successfull_widget.dart'
 export '/transaction_failed/transaction_failed_widget.dart'
     show TransactionFailedWidget;
 export '/chatbot/chatbot_widget.dart' show ChatbotWidget;
-export '/telegram/telegram_widget.dart' show TelegramWidget;

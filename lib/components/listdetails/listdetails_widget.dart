@@ -52,8 +52,8 @@ class _ListdetailsWidgetState extends State<ListdetailsWidget> {
               child: SizedBox(
                 width: 50.0,
                 height: 50.0,
-                child: SpinKitSpinningCircle(
-                  color: FlutterFlowTheme.of(context).primary,
+                child: SpinKitFoldingCube(
+                  color: FlutterFlowTheme.of(context).tertiary,
                   size: 50.0,
                 ),
               ),
@@ -65,7 +65,7 @@ class _ListdetailsWidgetState extends State<ListdetailsWidget> {
           key: scaffoldKey,
           backgroundColor: Colors.white,
           appBar: AppBar(
-            backgroundColor: Colors.white,
+            backgroundColor: const Color(0xFF08654A),
             automaticallyImplyLeading: false,
             leading: InkWell(
               splashColor: Colors.transparent,
@@ -75,21 +75,27 @@ class _ListdetailsWidgetState extends State<ListdetailsWidget> {
               onTap: () async {
                 context.pop();
               },
-              child: const Icon(
+              child: Icon(
                 Icons.chevron_left_rounded,
-                color: Color(0xFF0F1113),
+                color: FlutterFlowTheme.of(context).secondaryBackground,
                 size: 32.0,
               ),
             ),
-            title: Text(
-              listdetailsListsRecord.name,
-              style: FlutterFlowTheme.of(context).headlineMedium.override(
-                    fontFamily: 'Outfit',
-                    color: const Color(0xFF0F1113),
-                    fontSize: 24.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w500,
-                  ),
+            title: Align(
+              alignment: const AlignmentDirectional(0.0, 0.0),
+              child: Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 50.0, 0.0),
+                child: Text(
+                  listdetailsListsRecord.name,
+                  style: FlutterFlowTheme.of(context).headlineMedium.override(
+                        fontFamily: 'Outfit',
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        fontSize: 24.0,
+                        letterSpacing: 0.0,
+                        fontWeight: FontWeight.w500,
+                      ),
+                ),
+              ),
             ),
             actions: const [],
             centerTitle: false,
@@ -169,37 +175,6 @@ class _ListdetailsWidgetState extends State<ListdetailsWidget> {
                     ],
                   ),
                 ),
-                Padding(
-                  padding:
-                      const EdgeInsetsDirectional.fromSTEB(90.0, 0.0, 0.0, 100.0),
-                  child: FFButtonWidget(
-                    onPressed: () async {
-                      context.pushNamed('null');
-                    },
-                    text: FFLocalizations.of(context).getText(
-                      'uvp3fh4u' /* upload  photo */,
-                    ),
-                    options: FFButtonOptions(
-                      height: 40.0,
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                      iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: FlutterFlowTheme.of(context).primary,
-                      textStyle:
-                          FlutterFlowTheme.of(context).headlineSmall.override(
-                                fontFamily: 'Inter',
-                                letterSpacing: 0.0,
-                              ),
-                      elevation: 3.0,
-                      borderSide: const BorderSide(
-                        color: Colors.transparent,
-                        width: 1.0,
-                      ),
-                      borderRadius: BorderRadius.circular(18.0),
-                    ),
-                  ),
-                ),
                 Align(
                   alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Padding(
@@ -226,7 +201,7 @@ class _ListdetailsWidgetState extends State<ListdetailsWidget> {
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         iconPadding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: const Color(0xFF4B39EF),
+                        color: FlutterFlowTheme.of(context).success,
                         textStyle:
                             FlutterFlowTheme.of(context).headlineSmall.override(
                                   fontFamily: 'Outfit',

@@ -55,6 +55,12 @@ class _LoginWidgetState extends State<LoginWidget> {
           body: Container(
             height: double.infinity,
             decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.fitHeight,
+                image: Image.asset(
+                  'assets/images/bG.jpg',
+                ).image,
+              ),
               gradient: LinearGradient(
                 colors: [
                   FlutterFlowTheme.of(context).primary,
@@ -81,33 +87,6 @@ class _LoginWidgetState extends State<LoginWidget> {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       alignment: const AlignmentDirectional(0.0, 0.0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 12.0, 0.0),
-                            child: Icon(
-                              Icons.flourescent_rounded,
-                              color: FlutterFlowTheme.of(context).info,
-                              size: 44.0,
-                            ),
-                          ),
-                          Text(
-                            FFLocalizations.of(context).getText(
-                              'y6iv2aj7' /* Genefarm */,
-                            ),
-                            style: FlutterFlowTheme.of(context)
-                                .displaySmall
-                                .override(
-                                  fontFamily: 'Inter',
-                                  color: FlutterFlowTheme.of(context).info,
-                                  letterSpacing: 0.0,
-                                ),
-                          ),
-                        ],
-                      ),
                     ),
                   ),
                   Padding(
@@ -356,7 +335,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     }
 
                                     context.pushNamedAuth(
-                                        'Home', context.mounted);
+                                        'homepage', context.mounted);
                                   },
                                   text: FFLocalizations.of(context).getText(
                                     'lxrxzq5f' /* Sign In */,
@@ -417,7 +396,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     }
 
                                     context.pushNamedAuth(
-                                        'Home', context.mounted);
+                                        'homepage', context.mounted);
                                   },
                                   text: FFLocalizations.of(context).getText(
                                     'xhciznzb' /* Continue with Google */,
@@ -552,7 +531,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     elevation: 0.0,
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context)
-                                          .primaryBackground,
+                                          .secondaryText,
                                       width: 2.0,
                                     ),
                                     borderRadius: BorderRadius.circular(12.0),

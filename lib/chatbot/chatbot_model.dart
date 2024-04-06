@@ -1,3 +1,4 @@
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'chatbot_widget.dart' show ChatbotWidget;
 import 'package:flutter/material.dart';
@@ -10,6 +11,10 @@ class ChatbotModel extends FlutterFlowModel<ChatbotWidget> {
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;
+  // Stores action output result for [Backend Call - Create Document] action in TextField widget.
+  ChatRecord? prompt;
+  // Stores action output result for [Gemini - Generate Text] action in Button widget.
+  String? gresult;
 
   @override
   void initState(BuildContext context) {}

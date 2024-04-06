@@ -46,7 +46,7 @@ class _HomepageWidgetState extends State<HomepageWidget> {
         key: scaffoldKey,
         backgroundColor: const Color(0xFFF1F5F8),
         appBar: AppBar(
-          backgroundColor: const Color(0xFF23FC03),
+          backgroundColor: const Color(0xFF08654A),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
@@ -85,28 +85,6 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Text(
-                          FFLocalizations.of(context).getText(
-                            'cio6sbvp' /* the following product are avai... */,
-                          ),
-                          style:
-                              FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Plus Jakarta Sans',
-                                    color: const Color(0xFF57636C),
-                                    fontSize: 14.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding:
                         const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
                     child: StreamBuilder<List<ProductDescriptionRecord>>(
                       stream: queryProductDescriptionRecord(),
@@ -117,8 +95,8 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                             child: SizedBox(
                               width: 50.0,
                               height: 50.0,
-                              child: SpinKitSpinningCircle(
-                                color: FlutterFlowTheme.of(context).primary,
+                              child: SpinKitFoldingCube(
+                                color: FlutterFlowTheme.of(context).tertiary,
                                 size: 50.0,
                               ),
                             ),
@@ -294,12 +272,12 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                   width: double.infinity,
                   height: 61.0,
                   decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).secondary,
+                    color: FlutterFlowTheme.of(context).accent1,
                     borderRadius: const BorderRadius.only(
-                      bottomLeft: Radius.circular(16.0),
-                      bottomRight: Radius.circular(16.0),
-                      topLeft: Radius.circular(16.0),
-                      topRight: Radius.circular(16.0),
+                      bottomLeft: Radius.circular(25.0),
+                      bottomRight: Radius.circular(25.0),
+                      topLeft: Radius.circular(25.0),
+                      topRight: Radius.circular(25.0),
                     ),
                   ),
                   child: Row(
@@ -321,9 +299,8 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                               },
                               child: FaIcon(
                                 FontAwesomeIcons.cartPlus,
-                                color: FlutterFlowTheme.of(context)
-                                    .primaryBackground,
-                                size: 40.0,
+                                color: FlutterFlowTheme.of(context).primaryText,
+                                size: 37.0,
                               ),
                             ),
                           ),
@@ -332,14 +309,23 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                       Expanded(
                         child: Align(
                           alignment: const AlignmentDirectional(0.0, 0.0),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(50.0),
-                            child: Image.asset(
-                              'assets/images/chatbot.jpg',
-                              width: 55.0,
-                              height: 55.0,
-                              fit: BoxFit.cover,
-                              alignment: const Alignment(0.0, 0.0),
+                          child: InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              context.pushNamed('chatbot');
+                            },
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(50.0),
+                              child: Image.asset(
+                                'assets/images/chatbot.jpg',
+                                width: 55.0,
+                                height: 55.0,
+                                fit: BoxFit.cover,
+                                alignment: const Alignment(0.0, 0.0),
+                              ),
                             ),
                           ),
                         ),
@@ -350,11 +336,19 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                           child: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 27.0, 0.0),
-                            child: Icon(
-                              Icons.person_rounded,
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              size: 40.0,
+                            child: InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                context.pushNamed('Profile');
+                              },
+                              child: Icon(
+                                Icons.person_rounded,
+                                color: FlutterFlowTheme.of(context).primaryText,
+                                size: 40.0,
+                              ),
                             ),
                           ),
                         ),

@@ -109,12 +109,6 @@ Locale createLocale(String language) => language.contains('_')
 final kTranslationsMap = <Map<String, Map<String, String>>>[
   // Create
   {
-    'lgnvb24z': {
-      'en': 'Genefarm',
-      'hi': 'जीनफार्म',
-      'kn': 'ಜಿನೆಫಾರ್ಮ್',
-      'ta': 'மரபணு பண்ணை',
-    },
     '10s04v0h': {
       'en': 'Get Started',
       'hi': 'शुरू हो जाओ',
@@ -184,12 +178,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Login
   {
-    'y6iv2aj7': {
-      'en': 'Genefarm',
-      'hi': 'जीनफार्म',
-      'kn': 'ಜಿನೆಫಾರ್ಮ್',
-      'ta': 'மரபணு பண்ணை',
-    },
     'hk8hy2fu': {
       'en': 'Welcome Back',
       'hi': 'वापसी पर स्वागत है',
@@ -259,12 +247,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // ForgotPassword
   {
-    'wixpdlfe': {
-      'en': 'Genefarm',
-      'hi': 'जीनफार्म',
-      'kn': 'ಜಿನೆಫಾರ್ಮ್',
-      'ta': 'மரபணு பண்ணை',
-    },
     'jlf1hgrh': {
       'en': 'Forgot Password',
       'hi': 'पासवर्ड भूल गए',
@@ -301,12 +283,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // createProfile
   {
-    'm44y5tjp': {
-      'en': 'Genefarm',
-      'hi': 'जीनफार्म',
-      'kn': 'ಜಿನೆಫಾರ್ಮ್',
-      'ta': 'மரபணு பண்ணை',
-    },
     'dv2ienv6': {
       'en': 'Home',
       'hi': 'घर',
@@ -388,12 +364,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // ChangePassword
   {
-    'h9nj3ugf': {
-      'en': 'Genefarm',
-      'hi': 'जीनफार्म',
-      'kn': 'ಜಿನೆಫಾರ್ಮ್',
-      'ta': 'மரபணு பண்ணை',
-    },
     'ymtyhcag': {
       'en': 'Change Password',
       'hi': 'पासवर्ड बदलें',
@@ -428,53 +398,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': 'வீடு',
     },
   },
-  // Home
-  {
-    'pav4mnid': {
-      'en': ' login ',
-      'hi': '',
-      'kn': '',
-      'ta': '',
-    },
-    '7h8f7ugc': {
-      'en': 'profile',
-      'hi': '',
-      'kn': '',
-      'ta': '',
-    },
-    'kvnt48hg': {
-      'en': 'List',
-      'hi': '',
-      'kn': '',
-      'ta': '',
-    },
-    'bc4wm888': {
-      'en': 'Button',
-      'hi': '',
-      'kn': '',
-      'ta': '',
-    },
-    '4i6iv9vl': {
-      'en': 'Page Title',
-      'hi': 'पृष्ठ का शीर्षक',
-      'kn': 'ಪುಟದ ಶೀರ್ಷಿಕೆ',
-      'ta': 'பக்கத்தின் தலைப்பு',
-    },
-    'f08xg1sc': {
-      'en': 'Home',
-      'hi': 'घर',
-      'kn': 'ಮನೆ',
-      'ta': 'வீடு',
-    },
-  },
   // Phone
   {
-    'c1atxvma': {
-      'en': 'Genefarm',
-      'hi': 'जीनफार्म',
-      'kn': 'ಜಿನೆಫಾರ್ಮ್',
-      'ta': 'மரபணு பண்ணை',
-    },
     'qkqsz96l': {
       'en': 'Phone Sign In',
       'hi': 'फ़ोन साइन इन करें',
@@ -510,12 +435,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // VerifyOTP
   {
-    'y47wrwdz': {
-      'en': 'Genefarm',
-      'hi': 'जीनफार्म',
-      'kn': 'ಜಿನೆಫಾರ್ಮ್',
-      'ta': 'மரபணு பண்ணை',
-    },
     '0bae7uv8': {
       'en': 'verify',
       'hi': 'सत्यापित करें',
@@ -576,12 +495,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // homepage
   {
-    'cio6sbvp': {
-      'en': 'the following product are available',
-      'hi': '',
-      'kn': '',
-      'ta': '',
-    },
     'pvh3ks24': {
       'en': 'Home',
       'hi': '',
@@ -597,14 +510,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // lists
   {
-    'bfq7q7jk': {
-      'en': 'the following lists  are available',
-      'hi': '',
-      'kn': '',
-      'ta': '',
-    },
     'ctk5w74r': {
-      'en': '      list',
+      'en': 'List',
       'hi': '',
       'kn': '',
       'ta': '',
@@ -618,12 +525,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // listdetails
   {
-    'uvp3fh4u': {
-      'en': 'upload  photo',
-      'hi': '',
-      'kn': '',
-      'ta': '',
-    },
     'hqda69ye': {
       'en': 'add to cart ',
       'hi': '',
@@ -633,12 +534,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // cart
   {
-    'evh7vevq': {
-      'en': 'cart items are below ',
-      'hi': '',
-      'kn': '',
-      'ta': '',
-    },
     'tsdm07vl': {
       'en': 'checkout ',
       'hi': '',
@@ -730,19 +625,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // chatbot
   {
     '6gbjqhpn': {
-      'en': 'Label here...',
+      'en': 'Ask anything...',
       'hi': '',
       'kn': '',
       'ta': '',
     },
     'wriar5st': {
       'en': 'Ask',
-      'hi': '',
-      'kn': '',
-      'ta': '',
-    },
-    'p8v9kafb': {
-      'en': 'Hello World',
       'hi': '',
       'kn': '',
       'ta': '',
@@ -754,21 +643,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': '',
     },
     'nojolmsi': {
-      'en': 'Home',
-      'hi': '',
-      'kn': '',
-      'ta': '',
-    },
-  },
-  // Telegram
-  {
-    'ybfuyidg': {
-      'en': 'Telegram ',
-      'hi': '',
-      'kn': '',
-      'ta': '',
-    },
-    'zmiidcvr': {
       'en': 'Home',
       'hi': '',
       'kn': '',

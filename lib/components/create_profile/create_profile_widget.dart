@@ -44,6 +44,12 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
         body: Container(
           height: double.infinity,
           decoration: BoxDecoration(
+            image: DecorationImage(
+              fit: BoxFit.fitHeight,
+              image: Image.asset(
+                'assets/images/bG.jpg',
+              ).image,
+            ),
             gradient: LinearGradient(
               colors: [
                 FlutterFlowTheme.of(context).primary,
@@ -69,33 +75,6 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                       borderRadius: BorderRadius.circular(16.0),
                     ),
                     alignment: const AlignmentDirectional(0.0, 0.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 12.0, 0.0),
-                          child: Icon(
-                            Icons.flourescent_rounded,
-                            color: FlutterFlowTheme.of(context).info,
-                            size: 44.0,
-                          ),
-                        ),
-                        Text(
-                          FFLocalizations.of(context).getText(
-                            'm44y5tjp' /* Genefarm */,
-                          ),
-                          style: FlutterFlowTheme.of(context)
-                              .displaySmall
-                              .override(
-                                fontFamily: 'Inter',
-                                color: FlutterFlowTheme.of(context).info,
-                                letterSpacing: 0.0,
-                              ),
-                        ),
-                      ],
-                    ),
                   ),
                 ),
                 Padding(
@@ -129,7 +108,7 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                           title: 'Create Profile',
                           confirmButtonText: 'Save & Continue',
                           navigateAction: () async {
-                            context.pushNamed('Home');
+                            context.pushNamed('homepage');
                           },
                         ),
                       ),

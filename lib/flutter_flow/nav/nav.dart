@@ -115,11 +115,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const ChangePasswordWidget(),
         ),
         FFRoute(
-          name: 'Home',
-          path: '/home',
-          builder: (context, params) => const HomeWidget(),
-        ),
-        FFRoute(
           name: 'Phone',
           path: '/Phone',
           builder: (context, params) => PhoneWidget(
@@ -197,11 +192,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'chatbot',
           path: '/chatbot',
           builder: (context, params) => const ChatbotWidget(),
-        ),
-        FFRoute(
-          name: 'Telegram',
-          path: '/telegram',
-          builder: (context, params) => const TelegramWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

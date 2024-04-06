@@ -1,7 +1,9 @@
+import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'transaction_failed_model.dart';
 export 'transaction_failed_model.dart';
 
@@ -13,10 +15,26 @@ class TransactionFailedWidget extends StatefulWidget {
       _TransactionFailedWidgetState();
 }
 
-class _TransactionFailedWidgetState extends State<TransactionFailedWidget> {
+class _TransactionFailedWidgetState extends State<TransactionFailedWidget>
+    with TickerProviderStateMixin {
   late TransactionFailedModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  final animationsMap = {
+    'iconOnPageLoadAnimation': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        RotateEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 600.ms,
+          begin: 0.0,
+          end: 1.0,
+        ),
+      ],
+    ),
+  };
 
   @override
   void initState() {
@@ -71,7 +89,8 @@ class _TransactionFailedWidgetState extends State<TransactionFailedWidget> {
                           Icons.close_sharp,
                           color: FlutterFlowTheme.of(context).secondaryText,
                           size: 65.0,
-                        ),
+                        ).animateOnPageLoad(
+                            animationsMap['iconOnPageLoadAnimation']!),
                       ),
                     ),
                   ),
@@ -106,7 +125,7 @@ class _TransactionFailedWidgetState extends State<TransactionFailedWidget> {
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 50.0),
                 child: FFButtonWidget(
                   onPressed: () async {
-                    context.pushNamed('Home');
+                    context.pushNamed('homepage');
                   },
                   text: FFLocalizations.of(context).getText(
                     '3udxua98' /* Back to home */,

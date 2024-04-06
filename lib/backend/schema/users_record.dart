@@ -96,6 +96,11 @@ class UsersRecord extends FirestoreRecord {
   String get gmoimg => _gmoimg ?? '';
   bool hasGmoimg() => _gmoimg != null;
 
+  // "prompt" field.
+  String? _prompt;
+  String get prompt => _prompt ?? '';
+  bool hasPrompt() => _prompt != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -113,6 +118,7 @@ class UsersRecord extends FirestoreRecord {
     _gMOName = snapshotData['GMOName'] as String?;
     _gMOState = snapshotData['GMOState'] as String?;
     _gmoimg = snapshotData['GMOIMG'] as String?;
+    _prompt = snapshotData['prompt'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -165,6 +171,7 @@ Map<String, dynamic> createUsersRecordData({
   String? gMOName,
   String? gMOState,
   String? gmoimg,
+  String? prompt,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -184,6 +191,7 @@ Map<String, dynamic> createUsersRecordData({
       'GMOName': gMOName,
       'GMOState': gMOState,
       'GMOIMG': gmoimg,
+      'prompt': prompt,
     }.withoutNulls,
   );
 
@@ -210,7 +218,8 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.phonenumber == e2?.phonenumber &&
         e1?.gMOName == e2?.gMOName &&
         e1?.gMOState == e2?.gMOState &&
-        e1?.gmoimg == e2?.gmoimg;
+        e1?.gmoimg == e2?.gmoimg &&
+        e1?.prompt == e2?.prompt;
   }
 
   @override
@@ -230,7 +239,8 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.phonenumber,
         e?.gMOName,
         e?.gMOState,
-        e?.gmoimg
+        e?.gmoimg,
+        e?.prompt
       ]);
 
   @override
