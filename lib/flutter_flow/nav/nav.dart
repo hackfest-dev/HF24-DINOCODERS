@@ -6,7 +6,6 @@ import 'package:provider/provider.dart';
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 export 'package:go_router/go_router.dart';
@@ -149,6 +148,60 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'homepage',
           path: '/homepage',
           builder: (context, params) => const HomepageWidget(),
+        ),
+        FFRoute(
+          name: 'lists',
+          path: '/lists',
+          builder: (context, params) => ListsWidget(
+            listref: params.getParam(
+              'listref',
+              ParamType.DocumentReference,
+              false,
+              ['product-description'],
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'listdetails',
+          path: '/listdetails',
+          builder: (context, params) => ListdetailsWidget(
+            detailsref: params.getParam(
+              'detailsref',
+              ParamType.DocumentReference,
+              false,
+              ['product-description', 'lists'],
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'cart',
+          path: '/cart',
+          builder: (context, params) => const CartWidget(),
+        ),
+        FFRoute(
+          name: 'PaymentGATE',
+          path: '/paymentGATE',
+          builder: (context, params) => const PaymentGATEWidget(),
+        ),
+        FFRoute(
+          name: 'transactionSuccessfull',
+          path: '/transactionSuccessfull',
+          builder: (context, params) => const TransactionSuccessfullWidget(),
+        ),
+        FFRoute(
+          name: 'transactionFailed',
+          path: '/transactionFailed',
+          builder: (context, params) => const TransactionFailedWidget(),
+        ),
+        FFRoute(
+          name: 'chatbot',
+          path: '/chatbot',
+          builder: (context, params) => const ChatbotWidget(),
+        ),
+        FFRoute(
+          name: 'Telegram',
+          path: '/telegram',
+          builder: (context, params) => const TelegramWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -334,13 +387,13 @@ class FFRoute {
               : builder(context, ffParams);
           final child = appStateNotifier.loading
               ? Container(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                  color: Colors.transparent,
                   child: Center(
                     child: Image.asset(
-                      'assets/images/fijek_4.png',
+                      'assets/images/genefarm.gif',
                       width: double.infinity,
                       height: double.infinity,
-                      fit: BoxFit.contain,
+                      fit: BoxFit.cover,
                     ),
                   ),
                 )

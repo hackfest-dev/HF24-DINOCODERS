@@ -81,6 +81,21 @@ class UsersRecord extends FirestoreRecord {
   int get phonenumber => _phonenumber ?? 0;
   bool hasPhonenumber() => _phonenumber != null;
 
+  // "GMOName" field.
+  String? _gMOName;
+  String get gMOName => _gMOName ?? '';
+  bool hasGMOName() => _gMOName != null;
+
+  // "GMOState" field.
+  String? _gMOState;
+  String get gMOState => _gMOState ?? '';
+  bool hasGMOState() => _gMOState != null;
+
+  // "GMOIMG" field.
+  String? _gmoimg;
+  String get gmoimg => _gmoimg ?? '';
+  bool hasGmoimg() => _gmoimg != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -95,6 +110,9 @@ class UsersRecord extends FirestoreRecord {
     _password1 = snapshotData['password1'] as String?;
     _password2 = snapshotData['password2'] as String?;
     _phonenumber = castToType<int>(snapshotData['phonenumber']);
+    _gMOName = snapshotData['GMOName'] as String?;
+    _gMOState = snapshotData['GMOState'] as String?;
+    _gmoimg = snapshotData['GMOIMG'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -144,6 +162,9 @@ Map<String, dynamic> createUsersRecordData({
   String? password1,
   String? password2,
   int? phonenumber,
+  String? gMOName,
+  String? gMOState,
+  String? gmoimg,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -160,6 +181,9 @@ Map<String, dynamic> createUsersRecordData({
       'password1': password1,
       'password2': password2,
       'phonenumber': phonenumber,
+      'GMOName': gMOName,
+      'GMOState': gMOState,
+      'GMOIMG': gmoimg,
     }.withoutNulls,
   );
 
@@ -183,7 +207,10 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.title == e2?.title &&
         e1?.password1 == e2?.password1 &&
         e1?.password2 == e2?.password2 &&
-        e1?.phonenumber == e2?.phonenumber;
+        e1?.phonenumber == e2?.phonenumber &&
+        e1?.gMOName == e2?.gMOName &&
+        e1?.gMOState == e2?.gMOState &&
+        e1?.gmoimg == e2?.gmoimg;
   }
 
   @override
@@ -200,7 +227,10 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.title,
         e?.password1,
         e?.password2,
-        e?.phonenumber
+        e?.phonenumber,
+        e?.gMOName,
+        e?.gMOState,
+        e?.gmoimg
       ]);
 
   @override

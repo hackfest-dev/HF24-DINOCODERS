@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'g_m_odetails_widget.dart' show GMOdetailsWidget;
+import 'create_list_widget.dart' show CreateListWidget;
 import 'package:flutter/material.dart';
 
-class GMOdetailsModel extends FlutterFlowModel<GMOdetailsWidget> {
+class CreateListModel extends FlutterFlowModel<CreateListWidget> {
   @override
   void initState(BuildContext context) {}
 

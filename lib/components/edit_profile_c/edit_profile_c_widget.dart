@@ -134,10 +134,8 @@ class _EditProfileCWidgetState extends State<EditProfileCWidget> {
                         padding: const EdgeInsets.all(4.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(60.0),
-                          child: CachedNetworkImage(
-                            fadeInDuration: const Duration(milliseconds: 200),
-                            fadeOutDuration: const Duration(milliseconds: 200),
-                            imageUrl: _model.uploadedFileUrl,
+                          child: Image.asset(
+                            'assets/images/pro.png',
                             width: 300.0,
                             height: 200.0,
                             fit: BoxFit.cover,

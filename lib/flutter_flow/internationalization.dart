@@ -358,6 +358,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'kn': 'ಬೆಂಬಲ',
       'ta': 'ஆதரவு',
     },
+    'o4rtofot': {
+      'en': 'Queries..?',
+      'hi': 'सहायता',
+      'kn': 'ಬೆಂಬಲ',
+      'ta': 'ஆதரவு',
+    },
     'tkn0xt8n': {
       'en': 'Log Out',
       'hi': 'लॉग आउट',
@@ -432,6 +438,18 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '7h8f7ugc': {
       'en': 'profile',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+    'kvnt48hg': {
+      'en': 'List',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+    'bc4wm888': {
+      'en': 'Button',
       'hi': '',
       'kn': '',
       'ta': '',
@@ -558,37 +576,199 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // homepage
   {
-    'co36d2pe': {
-      'en': 'Order Now',
-      'hi': '',
-      'kn': '',
-      'ta': '',
-    },
     'cio6sbvp': {
-      'en': 'Our menu is below',
+      'en': 'the following product are available',
       'hi': '',
       'kn': '',
       'ta': '',
     },
-    'va4egbh3': {
-      'en': 'Title',
-      'hi': '',
-      'kn': '',
-      'ta': '',
-    },
-    'i92e5i7f': {
-      'en': 'Subtext',
-      'hi': '',
-      'kn': '',
-      'ta': '',
-    },
-    'iwb7tn80': {
-      'en': '\$11.00',
+    'pvh3ks24': {
+      'en': 'Home',
       'hi': '',
       'kn': '',
       'ta': '',
     },
     '60ysn6hl': {
+      'en': 'Home',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+  },
+  // lists
+  {
+    'bfq7q7jk': {
+      'en': 'the following lists  are available',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+    'ctk5w74r': {
+      'en': '      list',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+    'eth1rwcg': {
+      'en': 'Home',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+  },
+  // listdetails
+  {
+    'uvp3fh4u': {
+      'en': 'upload  photo',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+    'hqda69ye': {
+      'en': 'add to cart ',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+  },
+  // cart
+  {
+    'evh7vevq': {
+      'en': 'cart items are below ',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+    'tsdm07vl': {
+      'en': 'checkout ',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+    '46g1va6a': {
+      'en': 'Home',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+  },
+  // PaymentGATE
+  {
+    'ubmkbmtr': {
+      'en': 'Proceed to Pay',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+    '6ghnovjf': {
+      'en': 'Click Here to  Pay',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+    'i0bhvx7u': {
+      'en': 'Home',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+  },
+  // transactionSuccessfull
+  {
+    'ol3vjryb': {
+      'en': 'Thank You.!',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+    'zuaoe16x': {
+      'en': 'Your transaction is successfull',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+    'vax68hm7': {
+      'en': 'Back to home',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+    'le741h3e': {
+      'en': 'Home',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+  },
+  // transactionFailed
+  {
+    's1p637m8': {
+      'en': 'Ooops.!',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+    '6sxu5i06': {
+      'en': 'Your transaction is failed',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+    '3udxua98': {
+      'en': 'Back to home',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+    '2y36d0os': {
+      'en': 'Home',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+  },
+  // chatbot
+  {
+    '6gbjqhpn': {
+      'en': 'Label here...',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+    'wriar5st': {
+      'en': 'Ask',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+    'p8v9kafb': {
+      'en': 'Hello World',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+    'ubkstpak': {
+      'en': 'Ask Genee',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+    'nojolmsi': {
+      'en': 'Home',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+  },
+  // Telegram
+  {
+    'ybfuyidg': {
+      'en': 'Telegram ',
+      'hi': '',
+      'kn': '',
+      'ta': '',
+    },
+    'zmiidcvr': {
       'en': 'Home',
       'hi': '',
       'kn': '',
@@ -660,35 +840,25 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': 'உன்னை பற்றி கொஞ்சம்...',
     },
   },
-  // GMOdetails
+  // CreateList
   {
-    'idpxabni': {
-      'en': 'GMO',
-      'hi': 'जीएमओ',
-      'kn': 'GMO',
-      'ta': 'GMO',
+    'tqbiauw6': {
+      'en': 'you don\'t have any list',
+      'hi': '',
+      'kn': '',
+      'ta': '',
     },
-    'dsft8g4p': {
-      'en': 'Hybrid',
-      'hi': 'हाइब्रिड',
-      'kn': 'ಹೈಬ್ರಿಡ್',
-      'ta': 'கலப்பின',
+    'pq6d3zpd': {
+      'en': 'Click below button add new GM Crops',
+      'hi': '',
+      'kn': '',
+      'ta': '',
     },
-    'xye653jk': {
-      'en':
-          'Notes & descriptions go here they will maybe help explain when it needs done.',
-      'hi':
-          'नोट्स और विवरण यहां दिए गए हैं, शायद जरूरत पड़ने पर वे समझाने में मदद करेंगे।',
-      'kn':
-          'ಟಿಪ್ಪಣಿಗಳು ಮತ್ತು ವಿವರಣೆಗಳು ಇಲ್ಲಿಗೆ ಹೋಗುತ್ತವೆ, ಅದು ಯಾವಾಗ ಮಾಡಬೇಕೆಂದು ವಿವರಿಸಲು ಅವರು ಸಹಾಯ ಮಾಡಬಹುದು.',
-      'ta':
-          'குறிப்புகள் மற்றும் விளக்கங்கள் இங்கே செல்கின்றன, அவை எப்போது செய்ய வேண்டும் என்பதை விளக்க உதவும்.',
-    },
-    '6yi2s0po': {
-      'en': 'Buy',
-      'hi': 'खरीदना',
-      'kn': 'ಖರೀದಿಸಿ',
-      'ta': 'வாங்க',
+    'fopabucu': {
+      'en': 'Add New List',
+      'hi': '',
+      'kn': '',
+      'ta': '',
     },
   },
   // Miscellaneous
