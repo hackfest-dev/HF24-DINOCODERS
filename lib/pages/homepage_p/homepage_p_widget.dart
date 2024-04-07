@@ -144,7 +144,7 @@ class _HomepagePWidgetState extends State<HomepagePWidget> {
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
                                       context.pushNamed(
-                                        'lists',
+                                        'listP',
                                         queryParameters: {
                                           'listref': serializeParam(
                                             listViewProductDescriptionRecord
@@ -304,8 +304,8 @@ class _HomepagePWidgetState extends State<HomepagePWidget> {
                             borderRadius: BorderRadius.circular(50.0),
                             child: Image.asset(
                               'assets/images/1326.png',
-                              width: 55.0,
-                              height: 55.0,
+                              width: 50.0,
+                              height: 50.0,
                               fit: BoxFit.fill,
                               alignment: const Alignment(0.0, 0.0),
                             ),

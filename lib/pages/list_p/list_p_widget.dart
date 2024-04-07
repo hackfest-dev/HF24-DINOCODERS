@@ -166,7 +166,7 @@ class _ListPWidgetState extends State<ListPWidget> {
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
                                       context.pushNamed(
-                                        'listdetails',
+                                        'listdetailsP',
                                         queryParameters: {
                                           'detailsref': serializeParam(
                                             listViewListsRecord.reference,
