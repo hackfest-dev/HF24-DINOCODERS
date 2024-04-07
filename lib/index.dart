@@ -1,26 +1,38 @@
 // Export pages
-export '/components/pages/create/create_widget.dart' show CreateWidget;
-export '/components/login/login_widget.dart' show LoginWidget;
-export '/components/pages/forgot_password/forgot_password_widget.dart'
+export '/pages/create/create_widget.dart' show CreateWidget;
+export '/pages/login/login_widget.dart' show LoginWidget;
+export '/pages/forgot_password/forgot_password_widget.dart'
     show ForgotPasswordWidget;
-export '/components/create_profile/create_profile_widget.dart'
+export '/pages/create_profile/create_profile_widget.dart'
     show CreateProfileWidget;
-export '/components/pages/profile/profile_widget.dart' show ProfileWidget;
-export '/components/edit_profile/edit_profile_widget.dart'
-    show EditProfileWidget;
-export '/components/pages/change_password/change_password_widget.dart'
+export '/pages/profile/profile_widget.dart' show ProfileWidget;
+export '/pages/edit_profile/edit_profile_widget.dart' show EditProfileWidget;
+export '/pages/change_password/change_password_widget.dart'
     show ChangePasswordWidget;
-export '/components/phone/phone_widget.dart' show PhoneWidget;
-export '/components/verify_o_t_p/verify_o_t_p_widget.dart' show VerifyOTPWidget;
-export '/components/splash_screen/splash_screen_widget.dart'
-    show SplashScreenWidget;
-export '/components/homepage/homepage_widget.dart' show HomepageWidget;
-export '/components/lists/lists_widget.dart' show ListsWidget;
-export '/components/listdetails/listdetails_widget.dart' show ListdetailsWidget;
-export '/components/cart/cart_widget.dart' show CartWidget;
-export '/payment_g_a_t_e/payment_g_a_t_e_widget.dart' show PaymentGATEWidget;
-export '/transaction_successfull/transaction_successfull_widget.dart'
+export '/pages/phone/phone_widget.dart' show PhoneWidget;
+export '/pages/verify_o_t_p/verify_o_t_p_widget.dart' show VerifyOTPWidget;
+export '/pages/splash_screen/splash_screen_widget.dart' show SplashScreenWidget;
+export '/pages/homepage/homepage_widget.dart' show HomepageWidget;
+export '/pages/lists/lists_widget.dart' show ListsWidget;
+export '/pages/listdetails/listdetails_widget.dart' show ListdetailsWidget;
+export '/pages/cart/cart_widget.dart' show CartWidget;
+export '/pages/payment_g_a_t_e/payment_g_a_t_e_widget.dart'
+    show PaymentGATEWidget;
+export '/pages/transaction_successfull/transaction_successfull_widget.dart'
     show TransactionSuccessfullWidget;
-export '/transaction_failed/transaction_failed_widget.dart'
+export '/pages/transaction_failed/transaction_failed_widget.dart'
     show TransactionFailedWidget;
-export '/chatbot/chatbot_widget.dart' show ChatbotWidget;
+export '/pages/chatbot/chatbot_widget.dart' show ChatbotWidget;
+export '/pages/listdetails_p/listdetails_p_widget.dart' show ListdetailsPWidget;
+export '/pages/list_p/list_p_widget.dart' show ListPWidget;
+export '/pages/homepage_p/homepage_p_widget.dart' show HomepagePWidget;
+export '/pages/add_varity/add_varity_widget.dart' show AddVarityWidget;
+export '/pages/create_p/create_p_widget.dart' show CreatePWidget;
+export '/pages/login_p/login_p_widget.dart' show LoginPWidget;
+export '/pages/create_profile_p/create_profile_p_widget.dart'
+    show CreateProfilePWidget;
+export '/pages/phone_p/phone_p_widget.dart' show PhonePWidget;
+export '/pages/verify_o_t_p_p/verify_o_t_p_p_widget.dart' show VerifyOTPPWidget;
+export '/pages/profile_p/profile_p_widget.dart' show ProfilePWidget;
+export '/pages/add_list_element/add_list_element_widget.dart'
+    show AddListElementWidget;

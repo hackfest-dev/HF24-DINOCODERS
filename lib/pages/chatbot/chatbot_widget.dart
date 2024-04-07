@@ -196,7 +196,10 @@ class _ChatbotWidgetState extends State<ChatbotWidget> {
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
                 child: Text(
-                  _model.gresult!.maybeHandleOverflow(maxChars: 800),
+                  valueOrDefault<String>(
+                    _model.gresult,
+                    'wait for few seconds',
+                  ).maybeHandleOverflow(maxChars: 800),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Readex Pro',
                         letterSpacing: 0.0,

@@ -106,7 +106,7 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget> {
                         const EdgeInsetsDirectional.fromSTEB(0.0, 400.0, 0.0, 0.0),
                     child: FFButtonWidget(
                       onPressed: () async {
-                        context.pushNamed('Create');
+                        context.pushNamed('CreateP');
                       },
                       text: FFLocalizations.of(context).getText(
                         'noxsf8cv' /*   Producer  */,

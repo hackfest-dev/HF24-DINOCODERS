@@ -70,14 +70,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const LoginWidget() : const SplashScreenWidget(),
+      errorBuilder: (context, state) => appStateNotifier.loggedIn
+          ? const SplashScreenWidget()
+          : const SplashScreenWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) =>
-              appStateNotifier.loggedIn ? const LoginWidget() : const SplashScreenWidget(),
+          builder: (context, _) => appStateNotifier.loggedIn
+              ? const SplashScreenWidget()
+              : const SplashScreenWidget(),
         ),
         FFRoute(
           name: 'Create',
@@ -192,6 +194,85 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'chatbot',
           path: '/chatbot',
           builder: (context, params) => const ChatbotWidget(),
+        ),
+        FFRoute(
+          name: 'listdetailsP',
+          path: '/listdetailsP',
+          builder: (context, params) => ListdetailsPWidget(
+            detailsref: params.getParam(
+              'detailsref',
+              ParamType.DocumentReference,
+              false,
+              ['product-description', 'lists'],
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'listP',
+          path: '/listP',
+          builder: (context, params) => ListPWidget(
+            listref: params.getParam(
+              'listref',
+              ParamType.DocumentReference,
+              false,
+              ['product-description'],
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'homepageP',
+          path: '/homepageP',
+          builder: (context, params) => const HomepagePWidget(),
+        ),
+        FFRoute(
+          name: 'AddVarity',
+          path: '/addVarity',
+          builder: (context, params) => const AddVarityWidget(),
+        ),
+        FFRoute(
+          name: 'CreateP',
+          path: '/createP',
+          builder: (context, params) => const CreatePWidget(),
+        ),
+        FFRoute(
+          name: 'LoginP',
+          path: '/loginP',
+          builder: (context, params) => const LoginPWidget(),
+        ),
+        FFRoute(
+          name: 'createProfileP',
+          path: '/CreateProfileP',
+          builder: (context, params) => const CreateProfilePWidget(),
+        ),
+        FFRoute(
+          name: 'PhoneP',
+          path: '/PhoneP',
+          builder: (context, params) => PhonePWidget(
+            number: params.getParam(
+              'number',
+              ParamType.String,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'VerifyOTPP',
+          path: '/verifyP',
+          builder: (context, params) => VerifyOTPPWidget(
+            number: params.getParam(
+              'number',
+              ParamType.String,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'ProfileP',
+          path: '/ProfileP',
+          builder: (context, params) => const ProfilePWidget(),
+        ),
+        FFRoute(
+          name: 'addListElement',
+          path: '/addListElement',
+          builder: (context, params) => const AddListElementWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
