@@ -682,7 +682,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // AddVarity
   {
     'i2fucr74': {
-      'en': 'Edit',
+      'en': 'Add Varity',
       'hi': 'संपादन करना',
       'kn': 'ತಿದ್ದು',
       'ta': 'தொகு',

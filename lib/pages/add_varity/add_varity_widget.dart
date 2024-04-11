@@ -71,7 +71,7 @@ class _AddVarityWidgetState extends State<AddVarityWidget> {
           ),
           title: Text(
             FFLocalizations.of(context).getText(
-              'i2fucr74' /* Edit */,
+              'i2fucr74' /* Add Varity */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',

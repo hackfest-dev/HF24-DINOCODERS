@@ -194,12 +194,8 @@ class _PaymentGATEWidgetState extends State<PaymentGATEWidget> {
                           r'''$''',
                         )) {
                           context.goNamed('transactionSuccessfull');
-
-                          context.goNamed('homepage');
                         } else {
                           context.goNamed('transactionFailed');
-
-                          context.goNamed('homepage');
                         }
 
                         setState(() {});

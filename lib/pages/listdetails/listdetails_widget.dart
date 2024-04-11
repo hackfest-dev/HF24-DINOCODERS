@@ -190,6 +190,8 @@ class _ListdetailsWidgetState extends State<ListdetailsWidget> {
                           FFAppState().cartsum = FFAppState().cartsum +
                               listdetailsListsRecord.price.toDouble();
                         });
+
+                        context.pushNamed('cart');
                       },
                       text: FFLocalizations.of(context).getText(
                         'hqda69ye' /* add to cart  */,
