@@ -1,11 +1,12 @@
 import '/backend/backend.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/components/empty_list/empty_list_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 import 'homepage_p_model.dart';
 export 'homepage_p_model.dart';
 
@@ -38,6 +39,8 @@ class _HomepagePWidgetState extends State<HomepagePWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -48,20 +51,6 @@ class _HomepagePWidgetState extends State<HomepagePWidget> {
         appBar: AppBar(
           backgroundColor: const Color(0xFF08654A),
           automaticallyImplyLeading: false,
-          leading: FlutterFlowIconButton(
-            borderColor: Colors.transparent,
-            borderRadius: 30.0,
-            borderWidth: 1.0,
-            buttonSize: 60.0,
-            icon: Icon(
-              Icons.arrow_back_rounded,
-              color: FlutterFlowTheme.of(context).info,
-              size: 30.0,
-            ),
-            onPressed: () async {
-              context.pop();
-            },
-          ),
           title: Text(
             FFLocalizations.of(context).getText(
               '02ts0zze' /* Home */,
@@ -105,6 +94,9 @@ class _HomepagePWidgetState extends State<HomepagePWidget> {
                         List<ProductDescriptionRecord>
                             listViewProductDescriptionRecordList =
                             snapshot.data!;
+                        if (listViewProductDescriptionRecordList.isEmpty) {
+                          return const EmptyListWidget();
+                        }
                         return ListView.builder(
                           padding: EdgeInsets.zero,
                           primary: false,
@@ -289,10 +281,19 @@ class _HomepagePWidgetState extends State<HomepagePWidget> {
                           child: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 27.0, 0.0, 0.0, 0.0),
-                            child: FaIcon(
-                              FontAwesomeIcons.edit,
-                              color: FlutterFlowTheme.of(context).primaryText,
-                              size: 37.0,
+                            child: InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                context.pushNamed('AddVarity');
+                              },
+                              child: FaIcon(
+                                FontAwesomeIcons.edit,
+                                color: FlutterFlowTheme.of(context).primaryText,
+                                size: 37.0,
+                              ),
                             ),
                           ),
                         ),
@@ -300,14 +301,31 @@ class _HomepagePWidgetState extends State<HomepagePWidget> {
                       Expanded(
                         child: Align(
                           alignment: const AlignmentDirectional(0.0, 0.0),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(50.0),
-                            child: Image.asset(
-                              'assets/images/1326.png',
-                              width: 50.0,
-                              height: 50.0,
-                              fit: BoxFit.fill,
-                              alignment: const Alignment(0.0, 0.0),
+                          child: InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              context.pushNamed(
+                                'listdetailsP',
+                                queryParameters: {
+                                  'detailsref': serializeParam(
+                                    FFAppState().cart.first,
+                                    ParamType.DocumentReference,
+                                  ),
+                                }.withoutNulls,
+                              );
+                            },
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(50.0),
+                              child: Image.asset(
+                                'assets/images/1326.png',
+                                width: 50.0,
+                                height: 50.0,
+                                fit: BoxFit.fill,
+                                alignment: const Alignment(0.0, 0.0),
+                              ),
                             ),
                           ),
                         ),
@@ -337,27 +355,6 @@ class _HomepagePWidgetState extends State<HomepagePWidget> {
                       ),
                     ],
                   ),
-                ),
-              ),
-            ),
-            Align(
-              alignment: const AlignmentDirectional(1.0, 1.0),
-              child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 25.0, 95.0),
-                child: FlutterFlowIconButton(
-                  borderColor: FlutterFlowTheme.of(context).primary,
-                  borderRadius: 20.0,
-                  borderWidth: 1.0,
-                  buttonSize: 50.0,
-                  fillColor: FlutterFlowTheme.of(context).accent1,
-                  icon: Icon(
-                    Icons.add,
-                    color: FlutterFlowTheme.of(context).primaryText,
-                    size: 24.0,
-                  ),
-                  onPressed: () async {
-                    context.pushNamed('AddVarity');
-                  },
                 ),
               ),
             ),

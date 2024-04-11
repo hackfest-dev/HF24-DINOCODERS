@@ -1,5 +1,5 @@
+import '/components/edit_profile_p/edit_profile_p_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/pages/edit_profile_p/edit_profile_p_widget.dart';
 import 'create_profile_p_widget.dart' show CreateProfilePWidget;
 import 'package:flutter/material.dart';
 

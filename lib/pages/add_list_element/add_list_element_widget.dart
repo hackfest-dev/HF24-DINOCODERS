@@ -1,9 +1,11 @@
+import '/backend/backend.dart';
 import '/backend/firebase_storage/storage.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'add_list_element_model.dart';
 export 'add_list_element_model.dart';
@@ -107,8 +109,10 @@ class _AddListElementWidgetState extends State<AddListElementWidget> {
                         ),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(8.0),
-                          child: Image.asset(
-                            'assets/images/listempty.jpg',
+                          child: CachedNetworkImage(
+                            fadeInDuration: const Duration(milliseconds: 200),
+                            fadeOutDuration: const Duration(milliseconds: 200),
+                            imageUrl: _model.uploadedFileUrl,
                             width: 300.0,
                             height: 200.0,
                             fit: BoxFit.cover,
@@ -252,7 +256,6 @@ class _AddListElementWidgetState extends State<AddListElementWidget> {
                           fontFamily: 'Readex Pro',
                           letterSpacing: 0.0,
                         ),
-                    minLines: null,
                     keyboardType: TextInputType.emailAddress,
                     cursorColor: FlutterFlowTheme.of(context).primary,
                     validator:
@@ -314,7 +317,6 @@ class _AddListElementWidgetState extends State<AddListElementWidget> {
                           fontFamily: 'Readex Pro',
                           letterSpacing: 0.0,
                         ),
-                    minLines: null,
                     keyboardType: TextInputType.emailAddress,
                     cursorColor: FlutterFlowTheme.of(context).primary,
                     validator:
@@ -377,7 +379,6 @@ class _AddListElementWidgetState extends State<AddListElementWidget> {
                           letterSpacing: 0.0,
                         ),
                     maxLines: 5,
-                    minLines: null,
                     keyboardType: TextInputType.emailAddress,
                     cursorColor: FlutterFlowTheme.of(context).primary,
                     validator:
@@ -387,6 +388,14 @@ class _AddListElementWidgetState extends State<AddListElementWidget> {
               ),
               FFButtonWidget(
                 onPressed: () async {
+                  await ProductDescriptionRecord.collection
+                      .doc()
+                      .set(createProductDescriptionRecordData(
+                        name: _model.nameController.text,
+                        description: _model.detailsController.text,
+                        image: _model.uploadedFileUrl,
+                      ));
+
                   context.pushNamed('homepageP');
                 },
                 text: FFLocalizations.of(context).getText(

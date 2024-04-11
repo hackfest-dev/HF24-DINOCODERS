@@ -134,8 +134,10 @@ class _EditProfileCWidgetState extends State<EditProfileCWidget> {
                         padding: const EdgeInsets.all(4.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(60.0),
-                          child: Image.asset(
-                            'assets/images/pro.png',
+                          child: CachedNetworkImage(
+                            fadeInDuration: const Duration(milliseconds: 200),
+                            fadeOutDuration: const Duration(milliseconds: 200),
+                            imageUrl: _model.uploadedFileUrl,
                             width: 300.0,
                             height: 200.0,
                             fit: BoxFit.cover,
@@ -299,7 +301,6 @@ class _EditProfileCWidgetState extends State<EditProfileCWidget> {
                       fontFamily: 'Readex Pro',
                       letterSpacing: 0.0,
                     ),
-                minLines: null,
                 cursorColor: FlutterFlowTheme.of(context).primary,
                 validator:
                     _model.yourNameControllerValidator.asValidator(context),
@@ -417,7 +418,6 @@ class _EditProfileCWidgetState extends State<EditProfileCWidget> {
                     ),
                 textAlign: TextAlign.start,
                 maxLines: 3,
-                minLines: null,
                 cursorColor: FlutterFlowTheme.of(context).primary,
                 validator: _model.myBioControllerValidator.asValidator(context),
               ),

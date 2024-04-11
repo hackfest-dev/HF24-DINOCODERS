@@ -214,7 +214,6 @@ class _LoginPWidgetState extends State<LoginPWidget> {
                                           fontFamily: 'Readex Pro',
                                           letterSpacing: 0.0,
                                         ),
-                                    minLines: null,
                                     keyboardType: TextInputType.emailAddress,
                                     cursorColor:
                                         FlutterFlowTheme.of(context).primary,
@@ -308,7 +307,6 @@ class _LoginPWidgetState extends State<LoginPWidget> {
                                           fontFamily: 'Readex Pro',
                                           letterSpacing: 0.0,
                                         ),
-                                    minLines: null,
                                     cursorColor:
                                         FlutterFlowTheme.of(context).primary,
                                     validator: _model
@@ -322,7 +320,7 @@ class _LoginPWidgetState extends State<LoginPWidget> {
                                     0.0, 0.0, 0.0, 16.0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
-                                    GoRouter.of(context).prepareAuthEvent();
+                                    GoRouter.of(context).prepareAuthEvent(true);
 
                                     final user =
                                         await authManager.signInWithEmail(
@@ -334,8 +332,11 @@ class _LoginPWidgetState extends State<LoginPWidget> {
                                       return;
                                     }
 
-                                    context.pushNamedAuth(
-                                        'homepageP', context.mounted);
+                                    context.goNamedAuth(
+                                      'homepageP',
+                                      context.mounted,
+                                      ignoreRedirect: true,
+                                    );
                                   },
                                   text: FFLocalizations.of(context).getText(
                                     'oeodk7dg' /* Sign In */,
@@ -396,7 +397,7 @@ class _LoginPWidgetState extends State<LoginPWidget> {
                                     }
 
                                     context.pushNamedAuth(
-                                        'homepage', context.mounted);
+                                        'homepageP', context.mounted);
                                   },
                                   text: FFLocalizations.of(context).getText(
                                     '0gp8j3ra' /* Continue with Google */,

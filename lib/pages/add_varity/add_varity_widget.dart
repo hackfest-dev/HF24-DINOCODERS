@@ -1,5 +1,6 @@
 import '/backend/backend.dart';
 import '/backend/firebase_storage/storage.dart';
+import '/components/empty_list/empty_list_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -105,8 +106,8 @@ class _AddVarityWidgetState extends State<AddVarityWidget> {
                         ),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(8.0),
-                          child: Image.asset(
-                            'assets/images/fijek_4.png',
+                          child: Image.network(
+                            _model.uploadedFileUrl,
                             width: 300.0,
                             height: 200.0,
                             fit: BoxFit.cover,
@@ -250,7 +251,6 @@ class _AddVarityWidgetState extends State<AddVarityWidget> {
                           fontFamily: 'Readex Pro',
                           letterSpacing: 0.0,
                         ),
-                    minLines: null,
                     keyboardType: TextInputType.emailAddress,
                     cursorColor: FlutterFlowTheme.of(context).primary,
                     validator:
@@ -313,7 +313,6 @@ class _AddVarityWidgetState extends State<AddVarityWidget> {
                           letterSpacing: 0.0,
                         ),
                     maxLines: 5,
-                    minLines: null,
                     keyboardType: TextInputType.emailAddress,
                     cursorColor: FlutterFlowTheme.of(context).primary,
                     validator:
@@ -332,8 +331,27 @@ class _AddVarityWidgetState extends State<AddVarityWidget> {
                             (_model.detailsFocusNode?.hasFocus ?? false)
                                 .toString(),
                       ));
-
-                  context.pushNamed('homepageP');
+                  await showModalBottomSheet(
+                    isScrollControlled: true,
+                    backgroundColor: Colors.transparent,
+                    enableDrag: false,
+                    context: context,
+                    builder: (context) {
+                      return GestureDetector(
+                        onTap: () => _model.unfocusNode.canRequestFocus
+                            ? FocusScope.of(context)
+                                .requestFocus(_model.unfocusNode)
+                            : FocusScope.of(context).unfocus(),
+                        child: Padding(
+                          padding: MediaQuery.viewInsetsOf(context),
+                          child: const SizedBox(
+                            height: double.infinity,
+                            child: EmptyListWidget(),
+                          ),
+                        ),
+                      );
+                    },
+                  ).then((value) => safeSetState(() {}));
                 },
                 text: FFLocalizations.of(context).getText(
                   'g5ybynso' /* Add */,

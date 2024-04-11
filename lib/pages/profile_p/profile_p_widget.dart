@@ -885,7 +885,7 @@ class _ProfilePWidgetState extends State<ProfilePWidget>
                             GoRouter.of(context).clearRedirectLocation();
 
                             context.pushNamedAuth(
-                              'LoginP',
+                              'SplashScreen',
                               context.mounted,
                               extra: <String, dynamic>{
                                 kTransitionInfoKey: const TransitionInfo(

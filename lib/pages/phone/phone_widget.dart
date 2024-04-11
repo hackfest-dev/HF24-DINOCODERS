@@ -280,7 +280,6 @@ class _PhoneWidgetState extends State<PhoneWidget>
                                         fontFamily: 'Readex Pro',
                                         letterSpacing: 0.0,
                                       ),
-                                  minLines: null,
                                   keyboardType: TextInputType.phone,
                                   cursorColor:
                                       FlutterFlowTheme.of(context).primary,

@@ -214,7 +214,6 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           fontFamily: 'Readex Pro',
                                           letterSpacing: 0.0,
                                         ),
-                                    minLines: null,
                                     keyboardType: TextInputType.emailAddress,
                                     cursorColor:
                                         FlutterFlowTheme.of(context).primary,
@@ -308,7 +307,6 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           fontFamily: 'Readex Pro',
                                           letterSpacing: 0.0,
                                         ),
-                                    minLines: null,
                                     cursorColor:
                                         FlutterFlowTheme.of(context).primary,
                                     validator: _model
@@ -322,7 +320,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     0.0, 0.0, 0.0, 16.0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
-                                    GoRouter.of(context).prepareAuthEvent();
+                                    GoRouter.of(context).prepareAuthEvent(true);
 
                                     final user =
                                         await authManager.signInWithEmail(
@@ -334,8 +332,11 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       return;
                                     }
 
-                                    context.pushNamedAuth(
-                                        'homepage', context.mounted);
+                                    context.goNamedAuth(
+                                      'homepage',
+                                      context.mounted,
+                                      ignoreRedirect: true,
+                                    );
                                   },
                                   text: FFLocalizations.of(context).getText(
                                     'lxrxzq5f' /* Sign In */,

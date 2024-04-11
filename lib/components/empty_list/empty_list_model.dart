@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'create_list_widget.dart' show CreateListWidget;
+import 'empty_list_widget.dart' show EmptyListWidget;
 import 'package:flutter/material.dart';
 
-class CreateListModel extends FlutterFlowModel<CreateListWidget> {
+class EmptyListModel extends FlutterFlowModel<EmptyListWidget> {
   @override
   void initState(BuildContext context) {}
 

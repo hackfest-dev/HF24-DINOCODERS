@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_language_selector.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -197,8 +198,12 @@ class _ProfileWidgetState extends State<ProfileWidget>
                                 child: AuthUserStreamWidget(
                                   builder: (context) => ClipRRect(
                                     borderRadius: BorderRadius.circular(50.0),
-                                    child: Image.asset(
-                                      'assets/images/pro.png',
+                                    child: CachedNetworkImage(
+                                      fadeInDuration:
+                                          const Duration(milliseconds: 500),
+                                      fadeOutDuration:
+                                          const Duration(milliseconds: 500),
+                                      imageUrl: currentUserPhoto,
                                       width: 100.0,
                                       height: 100.0,
                                       fit: BoxFit.cover,
@@ -886,7 +891,7 @@ class _ProfileWidgetState extends State<ProfileWidget>
                             GoRouter.of(context).clearRedirectLocation();
 
                             context.pushNamedAuth(
-                              'Login',
+                              'SplashScreen',
                               context.mounted,
                               extra: <String, dynamic>{
                                 kTransitionInfoKey: const TransitionInfo(

@@ -308,6 +308,28 @@ class _ListPWidgetState extends State<ListPWidget> {
                       },
                     ),
                   ),
+                  Align(
+                    alignment: const AlignmentDirectional(1.0, 0.0),
+                    child: Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 180.0, 25.0, 0.0),
+                      child: FlutterFlowIconButton(
+                        borderColor: FlutterFlowTheme.of(context).primary,
+                        borderRadius: 20.0,
+                        borderWidth: 1.0,
+                        buttonSize: 40.0,
+                        fillColor: FlutterFlowTheme.of(context).accent1,
+                        icon: Icon(
+                          Icons.add,
+                          color: FlutterFlowTheme.of(context).primaryText,
+                          size: 24.0,
+                        ),
+                        onPressed: () async {
+                          context.pushNamed('addListElement');
+                        },
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),

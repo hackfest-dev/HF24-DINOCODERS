@@ -248,7 +248,6 @@ class _CreatePWidgetState extends State<CreatePWidget>
                                         fontFamily: 'Readex Pro',
                                         letterSpacing: 0.0,
                                       ),
-                                  minLines: null,
                                   keyboardType: TextInputType.emailAddress,
                                   cursorColor:
                                       FlutterFlowTheme.of(context).primary,
@@ -338,7 +337,6 @@ class _CreatePWidgetState extends State<CreatePWidget>
                                         fontFamily: 'Readex Pro',
                                         letterSpacing: 0.0,
                                       ),
-                                  minLines: null,
                                   cursorColor:
                                       FlutterFlowTheme.of(context).primary,
                                   validator: _model.passwordControllerValidator

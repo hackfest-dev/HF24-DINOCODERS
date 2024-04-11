@@ -2,7 +2,6 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'listdetails_p_model.dart';
@@ -111,8 +110,8 @@ class _ListdetailsPWidgetState extends State<ListdetailsPWidget> {
                   padding: const EdgeInsets.all(16.0),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(12.0),
-                    child: Image.asset(
-                      'assets/images/vnimc_1.png',
+                    child: Image.network(
+                      listdetailsPListsRecord.image,
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       height: 230.0,
                       fit: BoxFit.contain,
@@ -178,69 +177,33 @@ class _ListdetailsPWidgetState extends State<ListdetailsPWidget> {
                 ),
                 Align(
                   alignment: const AlignmentDirectional(0.0, 0.0),
-                  child: Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 24.0),
-                    child: FFButtonWidget(
-                      onPressed: () async {
-                        setState(() {
-                          FFAppState()
-                              .addToCart(listdetailsPListsRecord.reference);
-                        });
-                        setState(() {
-                          FFAppState().cartsum = FFAppState().cartsum +
-                              listdetailsPListsRecord.price.toDouble();
-                        });
-                      },
-                      text: FFLocalizations.of(context).getText(
-                        'gagz0hbz' /* add to cart  */,
-                      ),
-                      options: FFButtonOptions(
-                        width: 300.0,
-                        height: 60.0,
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).success,
-                        textStyle:
-                            FlutterFlowTheme.of(context).headlineSmall.override(
-                                  fontFamily: 'Outfit',
-                                  color: Colors.white,
-                                  fontSize: 20.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                        elevation: 3.0,
-                        borderSide: const BorderSide(
-                          color: Colors.transparent,
-                          width: 1.0,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Expanded(
+                        child: Align(
+                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          child: FlutterFlowIconButton(
+                            borderColor: FlutterFlowTheme.of(context).error,
+                            borderRadius: 20.0,
+                            borderWidth: 1.0,
+                            buttonSize: 40.0,
+                            fillColor: FlutterFlowTheme.of(context).error,
+                            icon: Icon(
+                              Icons.delete_rounded,
+                              color: FlutterFlowTheme.of(context)
+                                  .primaryBackground,
+                              size: 24.0,
+                            ),
+                            onPressed: () async {
+                              await widget.detailsref!.delete();
+
+                              context.pushNamed('homepageP');
+                            },
+                          ),
                         ),
-                        borderRadius: BorderRadius.circular(40.0),
                       ),
-                    ),
-                  ),
-                ),
-                Align(
-                  alignment: const AlignmentDirectional(1.0, 0.0),
-                  child: Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 180.0, 25.0, 0.0),
-                    child: FlutterFlowIconButton(
-                      borderColor: FlutterFlowTheme.of(context).primary,
-                      borderRadius: 20.0,
-                      borderWidth: 1.0,
-                      buttonSize: 40.0,
-                      fillColor: FlutterFlowTheme.of(context).accent1,
-                      icon: Icon(
-                        Icons.add,
-                        color: FlutterFlowTheme.of(context).primaryText,
-                        size: 24.0,
-                      ),
-                      onPressed: () async {
-                        context.pushNamed('addListElement');
-                      },
-                    ),
+                    ],
                   ),
                 ),
               ],

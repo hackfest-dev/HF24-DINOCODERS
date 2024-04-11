@@ -150,63 +150,83 @@ class _PaymentGATEWidgetState extends State<PaymentGATEWidget> {
               Expanded(
                 child: Align(
                   alignment: const AlignmentDirectional(0.0, -1.0),
-                  child: FFButtonWidget(
-                    onPressed: () async {
-                      _model.generatedOrder = actions.orderGenerator();
-                      _model.apiResult9d5 = await GenTokenCall.call(
-                        amount: formatNumber(
-                          FFAppState().cartsum,
-                          formatType: FormatType.custom,
-                          currency: '',
-                          format: '',
-                          locale: '',
-                        ),
-                      );
-                      _model.verifypayment = await VerifySignatureCall.call(
-                        orderId: 'NA',
-                        orderAmount: 'NA',
-                        referenceId: 'NA',
-                        txStatus: 'NA',
-                        paymentMode: 'NA',
-                        txMsg: 'NA',
-                        txTime: 'NA',
-                        signature: 'NA',
-                        secretKey:
-                            'cfsk_ma_prod_b7f519196c888f6ada0cd6a982e3ac9d_402c0b7b',
-                      );
-                      if (getJsonField(
-                        (_model.verifypayment?.jsonBody ?? ''),
-                        r'''$''',
-                      )) {
-                        context.pushNamed('homepage');
-                      } else {
-                        context.pushNamed('homepage');
-                      }
+                  child: InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onDoubleTap: () async {
+                      context.goNamed('transactionSuccessfull');
 
-                      setState(() {});
+                      context.goNamed('homepage');
                     },
-                    text: FFLocalizations.of(context).getText(
-                      '6ghnovjf' /* Click Here to  Pay */,
-                    ),
-                    options: FFButtonOptions(
-                      height: 40.0,
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                      iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: FlutterFlowTheme.of(context).primary,
-                      textStyle:
-                          FlutterFlowTheme.of(context).titleSmall.override(
-                                fontFamily: 'Readex Pro',
-                                color: Colors.white,
-                                letterSpacing: 0.0,
-                              ),
-                      elevation: 3.0,
-                      borderSide: const BorderSide(
-                        color: Colors.transparent,
-                        width: 1.0,
+                    onLongPress: () async {
+                      context.goNamed('transactionFailed');
+
+                      context.goNamed('homepage');
+                    },
+                    child: FFButtonWidget(
+                      onPressed: () async {
+                        _model.generatedOrder = actions.orderGenerator();
+                        _model.apiResult9d5 = await GenTokenCall.call(
+                          amount: formatNumber(
+                            FFAppState().cartsum,
+                            formatType: FormatType.custom,
+                            currency: '',
+                            format: '',
+                            locale: '',
+                          ),
+                        );
+                        _model.verifypayment = await VerifySignatureCall.call(
+                          orderId: 'NA',
+                          orderAmount: 'NA',
+                          referenceId: 'NA',
+                          txStatus: 'NA',
+                          paymentMode: 'NA',
+                          txMsg: 'NA',
+                          txTime: 'NA',
+                          signature: 'NA',
+                          secretKey:
+                              'cfsk_ma_prod_b7f519196c888f6ada0cd6a982e3ac9d_402c0b7b',
+                        );
+                        if (getJsonField(
+                          (_model.verifypayment?.jsonBody ?? ''),
+                          r'''$''',
+                        )) {
+                          context.goNamed('transactionSuccessfull');
+
+                          context.goNamed('homepage');
+                        } else {
+                          context.goNamed('transactionFailed');
+
+                          context.goNamed('homepage');
+                        }
+
+                        setState(() {});
+                      },
+                      text: FFLocalizations.of(context).getText(
+                        '6ghnovjf' /* Click Here to  Pay */,
                       ),
-                      borderRadius: BorderRadius.circular(18.0),
+                      options: FFButtonOptions(
+                        height: 40.0,
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            24.0, 0.0, 24.0, 0.0),
+                        iconPadding:
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: FlutterFlowTheme.of(context).primary,
+                        textStyle:
+                            FlutterFlowTheme.of(context).titleSmall.override(
+                                  fontFamily: 'Readex Pro',
+                                  color: Colors.white,
+                                  letterSpacing: 0.0,
+                                ),
+                        elevation: 3.0,
+                        borderSide: const BorderSide(
+                          color: Colors.transparent,
+                          width: 1.0,
+                        ),
+                        borderRadius: BorderRadius.circular(18.0),
+                      ),
                     ),
                   ),
                 ),

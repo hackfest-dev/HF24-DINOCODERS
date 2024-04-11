@@ -649,15 +649,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': 'வீடு',
     },
   },
-  // listdetailsP
-  {
-    'gagz0hbz': {
-      'en': 'add to cart ',
-      'hi': 'कार्ट में जोड़ें',
-      'kn': 'ಕಾರ್ಟ್ಗೆ ಸೇರಿಸಿ',
-      'ta': 'பெட்டகத்தில் சேர்',
-    },
-  },
   // listP
   {
     'gea4vrhu': {
@@ -1121,7 +1112,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': 'உன்னை பற்றி கொஞ்சம்...',
     },
   },
-  // CreateList
+  // EmptyList
   {
     'tqbiauw6': {
       'en': 'you don\'t have any list',

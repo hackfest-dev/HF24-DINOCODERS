@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -151,14 +152,18 @@ class _CartWidgetState extends State<CartWidget> {
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 1.0, 1.0, 1.0),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(6.0),
-                                          child: Image.network(
-                                            menuItemListsRecord.image,
-                                            width: 80.0,
-                                            height: 80.0,
-                                            fit: BoxFit.cover,
+                                        child: AuthUserStreamWidget(
+                                          builder: (context) => ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(6.0),
+                                            child: Image.network(
+                                              valueOrDefault(
+                                                  currentUserDocument?.gmoimg,
+                                                  ''),
+                                              width: 80.0,
+                                              height: 80.0,
+                                              fit: BoxFit.cover,
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -280,8 +285,8 @@ class _CartWidgetState extends State<CartWidget> {
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                 child: FFButtonWidget(
-                  onPressed: () {
-                    print('Button pressed ...');
+                  onPressed: () async {
+                    context.pushNamed('PaymentGATE');
                   },
                   text: FFLocalizations.of(context).getText(
                     'tsdm07vl' /* checkout  */,

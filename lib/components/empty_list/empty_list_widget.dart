@@ -2,18 +2,18 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'create_list_model.dart';
-export 'create_list_model.dart';
+import 'empty_list_model.dart';
+export 'empty_list_model.dart';
 
-class CreateListWidget extends StatefulWidget {
-  const CreateListWidget({super.key});
+class EmptyListWidget extends StatefulWidget {
+  const EmptyListWidget({super.key});
 
   @override
-  State<CreateListWidget> createState() => _CreateListWidgetState();
+  State<EmptyListWidget> createState() => _EmptyListWidgetState();
 }
 
-class _CreateListWidgetState extends State<CreateListWidget> {
-  late CreateListModel _model;
+class _EmptyListWidgetState extends State<EmptyListWidget> {
+  late EmptyListModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -24,7 +24,7 @@ class _CreateListWidgetState extends State<CreateListWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => CreateListModel());
+    _model = createModel(context, () => EmptyListModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }

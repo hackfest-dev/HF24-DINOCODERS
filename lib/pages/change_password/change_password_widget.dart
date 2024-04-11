@@ -271,7 +271,6 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget>
                                         fontFamily: 'Readex Pro',
                                         letterSpacing: 0.0,
                                       ),
-                                  minLines: null,
                                   keyboardType: TextInputType.emailAddress,
                                   cursorColor:
                                       FlutterFlowTheme.of(context).primary,

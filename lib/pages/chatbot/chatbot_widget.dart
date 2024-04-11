@@ -151,7 +151,6 @@ class _ChatbotWidgetState extends State<ChatbotWidget> {
                         fontFamily: 'Readex Pro',
                         letterSpacing: 0.0,
                       ),
-                  minLines: null,
                   validator:
                       _model.textControllerValidator.asValidator(context),
                 ),
