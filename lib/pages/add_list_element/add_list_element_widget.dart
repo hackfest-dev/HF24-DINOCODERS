@@ -108,7 +108,7 @@ class _AddListElementWidgetState extends State<AddListElementWidget> {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(8.0),
                           child: Image.asset(
-                            'assets/images/mwmx0_600',
+                            'assets/images/listempty.jpg',
                             width: 300.0,
                             height: 200.0,
                             fit: BoxFit.cover,

@@ -52,8 +52,8 @@ class _CreateProfilePWidgetState extends State<CreateProfilePWidget> {
             ),
             gradient: LinearGradient(
               colors: [
-                FlutterFlowTheme.of(context).primary,
-                FlutterFlowTheme.of(context).tertiary
+                FlutterFlowTheme.of(context).secondaryBackground,
+                FlutterFlowTheme.of(context).secondaryBackground
               ],
               stops: const [0.0, 1.0],
               begin: const AlignmentDirectional(0.87, -1.0),

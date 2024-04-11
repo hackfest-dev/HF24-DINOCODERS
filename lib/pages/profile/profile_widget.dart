@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_language_selector.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -140,6 +139,12 @@ class _ProfileWidgetState extends State<ProfileWidget>
                             width: double.infinity,
                             height: 140.0,
                             decoration: BoxDecoration(
+                              image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: Image.asset(
+                                  'assets/images/fijek_4.png',
+                                ).image,
+                              ),
                               gradient: LinearGradient(
                                 colors: [
                                   FlutterFlowTheme.of(context).accent1,
@@ -150,6 +155,7 @@ class _ProfileWidgetState extends State<ProfileWidget>
                                 begin: const AlignmentDirectional(-1.0, -1.0),
                                 end: const AlignmentDirectional(1.0, 1.0),
                               ),
+                              shape: BoxShape.rectangle,
                             ),
                             child: Container(
                               width: double.infinity,
@@ -191,12 +197,8 @@ class _ProfileWidgetState extends State<ProfileWidget>
                                 child: AuthUserStreamWidget(
                                   builder: (context) => ClipRRect(
                                     borderRadius: BorderRadius.circular(50.0),
-                                    child: CachedNetworkImage(
-                                      fadeInDuration:
-                                          const Duration(milliseconds: 500),
-                                      fadeOutDuration:
-                                          const Duration(milliseconds: 500),
-                                      imageUrl: currentUserPhoto,
+                                    child: Image.asset(
+                                      'assets/images/pro.png',
                                       width: 100.0,
                                       height: 100.0,
                                       fit: BoxFit.cover,

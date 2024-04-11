@@ -97,8 +97,8 @@ class _CreateListWidgetState extends State<CreateListWidget> {
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                         child: FFButtonWidget(
-                          onPressed: () {
-                            print('Button pressed ...');
+                          onPressed: () async {
+                            context.pushNamed('addListElement');
                           },
                           text: FFLocalizations.of(context).getText(
                             'fopabucu' /* Add New List */,

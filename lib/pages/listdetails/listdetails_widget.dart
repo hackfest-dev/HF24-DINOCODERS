@@ -110,11 +110,11 @@ class _ListdetailsWidgetState extends State<ListdetailsWidget> {
                   padding: const EdgeInsets.all(16.0),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(12.0),
-                    child: Image.network(
-                      listdetailsListsRecord.image,
+                    child: Image.asset(
+                      'assets/images/vnimc_1.png',
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       height: 230.0,
-                      fit: BoxFit.cover,
+                      fit: BoxFit.contain,
                     ),
                   ),
                 ),
