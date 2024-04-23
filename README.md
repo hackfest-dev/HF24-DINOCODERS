@@ -1,4 +1,5 @@
 # Genefarm
+
 <img align="center" width="800" height="800" src="https://github.com/yashwanths814/Genefarm/blob/flutterflow/assets/images/genefarm.gif">
 The Genefarm app acts as a comprehensive platform bridging GMO creators and farmers. It provides streamlining communication through user registration.
 GMO creators showcase their genetically modified crops, providing detailed information on benefits and performance.  
