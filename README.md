@@ -1,7 +1,10 @@
 # Genefarm
 
-A new Flutter project.
+<img align="center" width="800" height="800" src="https://github.com/yashwanths814/Genefarm/blob/flutterflow/assets/images/genefarm.gif">
+The Genefarm app acts as a comprehensive platform bridging GMO creators and farmers. It provides streamlining communication through user registration.
+GMO creators showcase their genetically modified crops, providing detailed information on benefits and performance.  
+Farmers by registering themselves can easily search and filter GMOs based on their specific needs and buy the saplings.  
+This helps both GMO creator and the farmer.
 
-## Getting Started
 
-FlutterFlow projects are built to run on the Flutter _stable_ release.
+
