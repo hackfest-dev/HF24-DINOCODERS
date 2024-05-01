@@ -1,6 +1,6 @@
 # Genefarm
 
-<img align="center" width="800" height="800" src="images/genefarm.gif">
+<img align="center" src="images/genefarm.gif">
 The Genefarm app acts as a comprehensive platform bridging GMO creators and farmers. It provides streamlining communication through user registration.
 GMO creators showcase their genetically modified crops, providing detailed information on benefits and performance.  
 Farmers by registering themselves can easily search and filter GMOs based on their specific needs and buy the saplings.  
